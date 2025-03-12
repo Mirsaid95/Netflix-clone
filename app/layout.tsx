@@ -5,7 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
 import GlobalContext from "@/context";
 import { ReactNode } from "react";
-
+// import Header from "@/components/header/header";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -36,10 +36,12 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-        >
-          <GlobalContext>
-            {children}
-          </GlobalContext>
+          >
+            <GlobalContext>
+              <main>
+                {children}
+              </main>
+            </GlobalContext>
         </Provider>
       </body>
     </html>

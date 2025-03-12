@@ -17,10 +17,3 @@ const GlobalContext = ({ children }: ChildProps) => {
 export default GlobalContext;
 
 
-export const useGlobalContext = () =>{
-    const context = useContext(Context)
-    if(context === null){
-        throw new Error("useGlobalContext must be used within a GlobalContext")
-    }
-    return context
-}
